@@ -1,0 +1,74 @@
+server:
+  port: 7777
+
+spring:
+  application:
+    name: ms-gateway
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  cloud:
+    gateway:
+
+
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders: "*"
+            allowCredentials: true
+      routes:
+        - id: route1
+          predicates:
+            - Path=/service-auth/**
+          filters:
+            - RewritePath=/service-auth/(?<s>.*), /${s}
+            - AddRequestHeader=X-GATEWAY-AUTHORIZED, my-super-not-secret-key-hardcoded
+
+          uri: lb://ms-auth
+
+        - id: route2
+          predicates:
+            - Path=/service-products/**
+          filters:
+            - RewritePath=/service-products/(?<s>.*), /${s}
+            - AddRequestHeader=X-GATEWAY-AUTHORIZED, my-super-not-secret-key-hardcoded
+
+          uri: lb://ms-products
+
+        - id: django-search-suggest
+          predicates:
+            - Path=/service-search/**
+          filters:
+            - RewritePath=/service-search/(?<remaining>.*), /${remaining}
+            - AddRequestHeader=X-GATEWAY-AUTHORIZED, my-super-not-secret-key-hardcoded
+
+          uri: http://ms-search:8000
+
+
+
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://ms-registery:8761/eureka
+
+
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    urls:
+      - url: /service-auth/v3/api-docs
+        name: Auth Service
+      - url: /service-products/v3/api-docs
+        name: Products Service
