@@ -1,0 +1,653 @@
+BrandID,BrandName
+1,DKNY
+2,EthnoVogue
+3,SPYKAR
+4,Raymond
+5,Parx
+6,SHOWOFF
+7,Kenneth Cole
+8,Vishudh
+9,Being Human
+10,Homesake
+11,SEJ by Nisha Gupta
+12,YAK YAK
+13,PARFAIT
+14,HIGHLANDER
+15,JEWEL JUNCTION
+16,ID
+17,Story@home
+18,Gini and Jony
+19,Sera
+20,AccessHer
+21,Alcis
+22,Difference of Opinion
+23,Michael Kors
+24,Tokyo Talkies
+25,her by invictus
+26,Soie
+27,Lara Karen
+28,Urban Dog
+29,ahilya
+30,VASTRAMAY
+31,Campus Sutra
+32,FIDO DIDO
+33,MIAH Decor
+34,BuckleUp
+35,Peter England
+36,AIGNER
+37,Park Avenue
+38,Roadster
+39,U.S. Polo Assn. Denim Co.
+40,Sweet Dreams
+41,Kazo
+42,Stylo Bug
+43,Lady Lyka
+44,GAS
+45,WITH
+46,ZUSH
+47,JBN Creation
+48,U.S. Polo Assn. Kids
+49,DressBerry
+50,Bvlgari
+51,ColorPlus
+52,Lakme
+53,Allen Solly Woman
+54,Palm Tree
+55,Arrow
+56,MANGO
+57,Carrera
+58,ROMEE
+59,TAYHAA
+60,Ishin
+61,Shoe Couture
+62,HARBORNBAY
+63,Keds
+64,Aj DEZInES
+65,Monte Carlo
+66,even
+67,ether
+68,Crimsoune Club
+69,Russell Athletic
+70,MIMOSA
+71,Puma
+72,Blackberrys
+73,Playdate
+74,Rocia
+75,Marvel by Wear Your Mind
+76,Annabelle by Pantaloons
+77,berrytree
+78,SIMON CARTER LONDON
+79,Beli
+80,Jn Joy
+81,THE SILHOUETTE STORE
+82,Xpose
+83,MBE
+84,Mast & Harbour
+85,JC Collection
+86,NEUDIS
+87,StyleStone
+88,SASSAFRAS
+89,United Colors of Benetton
+90,VLCC
+91,Kook N Keech Disney
+92,Bubblegummers
+93,Hoopers
+94,Peter England Casuals
+95,Honey by Pantaloons
+96,Pink Cow
+97,DAVID BECKHAM
+98,DOROTHY PERKINS
+99,Crew STREET
+100,Bhama Couture
+101,Zippo
+102,Daffodils
+103,C9 AIRWEAR
+104,Oxolloxo
+105,Soumya
+106,Crocs
+107,Carlton London
+108,HERE&NOW
+109,French Connection
+110,Next Look
+111,shaze
+112,Bitiya by Bhama
+113,Geox
+114,Tulsattva
+115,ExclusiveLane
+116,MSC
+117,Anekaant
+118,XYXX
+119,SHISEIDO
+120,Innisfree
+121,Wintage
+122,LOCOMOTIVE
+123,Bene Kleed
+124,Varanga
+125,Avira Home
+126,Force 10
+127,maxima
+128,Aapno Rajasthan
+129,Fortune
+130,Moedbuille
+131,Blue Saint
+132,MASPAR
+133,W
+134,SCORPIUS
+135,Ecko Unltd
+136,BERING
+137,HRX by Hrithik Roshan
+138,Healers
+139,Kvsfab
+140,MOVADO
+141,CINOCCI
+142,Mitera
+143,Harvard
+144,Ojjasvi
+145,Gliders
+146,U&F
+147,Abhishti
+148,Dreamscape
+149,OddCroft
+150,Flying Machine
+151,IT luggage
+152,Nike
+153,One Friday
+154,Indibelle
+155,Dynamocks
+156,Arrow New York
+157,Titan
+158,Zoop
+159,Levis
+160,IVOC
+161,Athena
+162,Arrow Sport
+163,Red Tape
+164,PANAHI
+165,Veni Vidi Vici
+166,CODE by Lifestyle
+167,Fame Forever by Lifestyle
+168,Sonata
+169,Yuris
+170,Sherrif Shoes
+171,TIMESMITH
+172,Cherry Crumble
+173,Senorita
+174,CHUTPUT
+175,Slumber Jill
+176,Metro
+177,Marks & Spencer
+178,Fastrack
+179,DODO & MOA
+180,FabSeasons
+181,Shaily
+182,Mirchi Fashion
+183,Sergio Tacchini
+184,Janasya
+185,Bossini
+186,Elizabeth Arden
+187,Rajnandini
+188,Call It Spring
+189,Coolers
+190,Chhabra 555
+191,LA LOFT
+192,Cottinfab
+193,Calvin Klein
+194,Liberty
+195,IMYOUNG
+196,CLAY CRAFT
+197,Crunchy Fashion
+198,Respiro
+199,trueBrowns
+200,Trend Arrest
+201,Besiva
+202,INCOLOR
+203,Kraus Jeans
+204,RICHARD PARKER by Pantaloons
+205,Mali Fionna
+206,Kryptic
+207,San Frissco
+208,The Kaftan Company
+209,Infuzze
+210,Simply
+211,Sir Corbett
+212,HOME DECOR INDIA
+213,Vero Moda
+214,Be Indi
+215,Da Intimo
+216,Camey
+217,Solemio
+218,MsFQ
+219,Forever New
+220,Killer
+221,AURELIA
+222,Miss Chase
+223,Saadgi
+224,Lee Cooper
+225,Foolzy
+226,ZHEIA
+227,Friskers
+228,UCLA
+229,Genie
+230,Femmora
+231,Fos Lighting
+232,FirstClap
+233,Clovia
+234,Style Quotient
+235,SG YUVRAJ
+236,URBAN TRIBE
+237,CASIO
+238,VRINDA
+239,Lady Stark
+240,Newton
+241,Alvaro Castagnino
+242,Campus
+243,Free Authority
+244,Dennmarks
+245,Voylla
+246,Wish Karo
+247,MBOSS
+248,Mochi
+249,ELLE
+250,OBSESSIONS
+251,Living Essence
+252,GIORDANO
+253,Hi RELs
+254,DDecor
+255,INVICTUS
+256,Evoke 1899
+257,Newport
+258,Louis Philippe
+259,Rajasthan Decor
+260,PANIT
+261,SELECTED
+262,SOJANYA
+263,Sangria
+264,Divine Casa
+265,Unravel India
+266,Steenbok
+267,Belle Fille
+268,Kittens
+269,Slub
+270,Blissta
+271,Alena
+272,SWHF
+273,JUMP USA
+274,FabAlley
+275,Nucleus
+276,Home Sparkle
+277,shiloh
+278,Allen Solly
+279,KLEIO
+280,Maniac
+281,Globus
+282,Fourwalls
+283,AKKRITI BY PANTALOONS
+284,Genius
+285,EQUINOX
+286,Zink London
+287,YASH GALLERY
+288,Sparx
+289,Van Heusen
+290,YK
+291,Blue Giraffe
+292,Silvermerc Designs
+293,Black coffee
+294,Jacques Lemans
+295,ZIYAA
+296,SKULT by Shahid Kapoor
+297,PERFKT-U
+298,Zeal
+299,Cortina
+300,plusS
+301,V Dot
+302,Shoetopia
+303,Eavan
+304,Masch Sports
+305,Bohemia Crystal
+306,Devis
+307,ONLY
+308,Eske
+309,Namyaa
+310,MIWAY
+311,Smiley World
+312,Maserati
+313,Archies
+314,Marie Claire
+315,Chumbak
+316,Aber & Q
+317,People
+318,GMF
+319,ABELINO
+320,COVER STORY
+321,Schwarzkopf PROFESSIONAL
+322,Karmic Vision
+323,Deco Window
+324,Bodycare
+325,ADIVA
+326,Latin Quarters
+327,Moda Rapido
+328,Indian Terrain
+329,RARE
+330,SOLES
+331,Lavie
+332,Truffle Collection
+333,KARATCART
+334,Priyaasi
+335,Mine4Nine
+336,CHROME & CORAL
+337,FAUSTO
+338,ADORN by Nikita Ladiwala
+339,Hancock
+340,Calvin Klein Jeans
+341,HEATWAVE
+342,GAP
+343,Qraa Men
+344,BownBee
+345,Baggit
+346,Force NXT
+347,URBANE
+348,Canary London
+349,Jack & Jones
+350,fancy mart
+351,ADORENITE
+352,Hypernation
+353,Pantaloons Junior
+354,Minions by Kook N Keech
+355,Caprese
+356,SUITLTD
+357,Harpa
+358,Taavi
+359,Geroo Jaipur
+360,Bonjour
+361,Bamboo Tree Jewels
+362,Kappa
+363,Sher Singh
+364,Morpheme Remedies
+365,KiddoPanti
+366,ANTS
+367,Allen Cooper
+368,Pure Home and Living
+369,ComicSense.xyz
+370,Louis Philippe Sport
+371,Monrow
+372,breya
+373,RANGMANCH BY PANTALOONS
+374,Wonder Woman
+375,Melange by Lifestyle
+376,CERIZ
+377,Eego Italy
+378,mf
+379,Chemistry
+380,TREEMODA
+381,Chambor
+382,OOMPH
+383,KazarMax
+384,Chkokko
+385,Duke
+386,Club York
+387,Jewels Galaxy
+388,Molly & Michel
+389,Libas
+390,Pipa Bella
+391,FOSH
+392,Freehand
+393,Ed Hardy
+394,Aditi Wasan
+395,Akiva
+396,Franco Leone
+397,Mufti
+398,7Rainbow
+399,Knotyy
+400,beevee
+401,Yellow Jeans
+402,Soludos
+403,Tresmode
+404,bigbanana
+405,Rex Straut Jeans
+406,hummel
+407,E2O
+408,CAVALLO by Linen Club
+409,Tommy Hilfiger
+410,PRESTO
+411,Tistabene
+412,boAt
+413,DENNISON
+414,U.S. Polo Assn.
+415,Kurti's by Menka
+416,Saree mall
+417,Forca by Lifestyle
+418,VALIOSAA
+419,Ginger by Lifestyle
+420,Iti
+421,Stylee LIFESTYLE
+422,JAINISH
+423,Cation
+424,WROGN
+425,GODS
+426,Disney by Wear Your Mind
+427,Calvin Klein Underwear
+428,Woodland
+429,INDYA
+430,meriggiare
+431,BIANCA
+432,Kook N Keech Marvel
+433,Just Wow
+434,Golden Peacock
+435,Rosaline
+436,Wildcraft
+437,Rubans
+438,Zaveri Pearls
+439,CUTECUMBER
+440,HAMMER
+441,PrettyCat
+442,Johnny Bravo by Kook N Keech
+443,Zivame
+444,Kook N Keech Garfield
+445,Tissu
+446,Turkish Bath
+447,Nature Casuals
+448,YWC
+449,Kraft Cellar
+450,Saral Home
+451,justpeachy
+452,GERUA
+453,Studio Voylla
+454,Bruno Manetti
+455,GIO COLLECTION
+456,Invincible
+457,Global Desi
+458,yelloe
+459,American Crew
+460,Blisscovered
+461,Alina decor
+462,MANOHARI
+463,Aujjessa
+464,t-base
+465,NBA
+466,RUF & TUF
+467,SPRAY GROUND
+468,Skechers
+469,UNKNOWN by Ayesha
+470,WILD WEST
+471,Pure Play
+472,PUMA Motorsport
+473,20Dresses
+474,Enamor
+475,Aerosoles
+476,Garmin
+477,Street Style Store
+478,Alom
+479,pinwheel
+480,Lotto
+481,IZOD
+482,Ruosh
+483,Aarika
+484,Reebok Classic
+485,FEVER
+486,Madame
+487,612 league
+488,Tossido
+489,WISSTLER
+490,AHIKA
+491,Jompers
+492,Yuuki
+493,Ahalyaa
+494,Van Heusen Woman
+495,Blacksmith
+496,fungus
+497,Naari
+498,Z-ZOOM
+499,Van Heusen Sport
+500,Lady Love
+501,NIZA
+502,Saint G
+503,HIROLAS
+504,The Pink Moon
+505,MISH
+506,Vozaf
+507,Louis Philippe Jeans
+508,Indo Era
+509,CALFNERO
+510,The House of Tara
+511,Kids Ville
+512,The Chennai Silks
+513,Superdry
+514,Fox
+515,Anouk
+516,OFF LIMITS
+517,Frozen
+518,FS Mini Klub
+519,De Moza
+520,VarEesha
+521,Zelocity
+522,Peanuts
+523,Denizen From Levis
+524,Ferraiolo
+525,Yaadleen
+526,Peter England Elite
+527,SEIKO
+528,TALES & STORIES
+529,Daily Life Forever52
+530,The Vanca
+531,AND
+532,The Indian Garage Co
+533,Voyage
+534,Reebok
+535,SCOUP
+536,GNIST
+537,Biba
+538,RAISIN
+539,AASK
+540,FABNEST
+541,Signature Sole
+542,Batman
+543,STAR WARS
+544,FUGAZEE
+545,GUESS
+546,ADIDAS Originals
+547,Fusion Beats
+548,bodha
+549,Peora
+550,Amante
+551,naughty ninos
+552,Rajesh Silk Mills
+553,ADIDAS
+554,Allen Solly Sport
+555,Krafted with Happiness
+556,Golden Girl
+557,RUGSMITH
+558,SKAGEN
+559,Masculino Latino
+560,Lychee bags
+561,Ira Soleil
+562,CORSICA
+563,Instacrush
+564,SCUDERIA FERRARI
+565,Superman
+566,DailyObjects
+567,The Dry State
+568,Orange and Orchid
+569,CAPTAIN AMERICA
+570,Teakwood Leathers
+571,Inc 5
+572,EK DO DHAI
+573,Natilene
+574,OBOW
+575,Basics
+576,ESBEDA
+577,TAG EYE
+578,Proline Active
+579,FableStreet
+580,amraoo
+581,Varkala Silk Sarees
+582,LilPicks
+583,Purple Feather
+584,FURO by Red Chief
+585,WESTCLO
+586,FOREVER 21
+587,Barbie by Many Frocks &
+588,Khushal K
+589,Rangoli Jaipur
+590,I AM FOR YOU
+591,Soulflower
+592,Allen Solly Junior
+593,Hubberholme
+594,Braun
+595,BOLLYGLOW
+596,Lacoste
+597,DUGRISTYLE
+598,FILA
+599,Vastraa Fusion
+600,Renka
+601,U.S. Polo Assn. Women
+602,Antheaa
+603,Tikhi Imli
+604,Wear Your Mind
+605,HUNTER 1114
+606,Moon Dust
+607,Philips
+608,AWW HUNNIE
+609,Purple State
+610,Kidling
+611,Twisha
+612,Genius18
+613,Pepe Jeans
+614,Lapis O Lupo
+615,SHINGORA
+616,Lino Perros
+617,Revlon
+618,MomToBe
+619,DEYANN
+620,Nauti Nati
+621,FLAVIDO
+622,QUIERO
+623,Inddus
+624,Laceandme
+625,Maybelline
+626,STREET 9
+627,Rain & Rainbow
+628,Campana
+629,ToniQ
+630,OSHKOSH Bgosh
+631,Qurvii
+632,Wild stone
+633,Plum
+634,BUKKUM
+635,KID1
+636,Hidesign
+637,Wrangler
+638,Ives
+639,Noble Faith
+640,PURYS
+641,BEAT LONDON by PEPE JEANS
+642,House of Pataudi
+643,INVU
+644,CAT
+645,Chopard
+646,Sonari
+647,ESPRIT
+648,PRITA
+649,Satrani
+650,109F
+651,SWISS MILITARY
+652,Stupid Cupid
