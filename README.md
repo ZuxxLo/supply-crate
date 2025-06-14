@@ -96,7 +96,7 @@ Avant de commencer, il faut avoir :
 1. **Cloner le projet :**
 
 ```bash
-git clone [https://github.com/ZuxxLo/supply-crate.git](https://github.com/ZuxxLo/supply-crate.git)
+git clone https://github.com/ZuxxLo/supply-crate.git
 cd supply-crate-backend
 ```
 
