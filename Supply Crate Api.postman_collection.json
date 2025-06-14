@@ -1,0 +1,4034 @@
+{
+	"info": {
+		"_postman_id": "9529b84f-5975-4276-b23e-a0e2f712a6bf",
+		"name": "Supply Crate Api",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" width=\"2162\" height=\"1530\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45509758"
+	},
+	"item": [
+		{
+			"name": "Admin routes",
+			"item": [
+				{
+					"name": "Categories",
+					"item": [
+						{
+							"name": "Create new category",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"T-shirts\",\r\n    \"parentCategoryId\": null\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/service-products/api/categories",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"service-products",
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "201 Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"T-shirts\",\r\n    \"parentCategoryId\": null\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/service-products/api/categories",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"categories"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 10:49:05 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": 28,\n        \"name\": \"T-shirts\",\n        \"parentCategoryId\": null\n    },\n    \"message\": \"Category created successfully\"\n}"
+								},
+								{
+									"name": "400 Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"T-shirts\",\r\n    \"parentCategoryId\": null\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/service-products/api/categories",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"categories"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 10:49:56 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": null,\n    \"message\": \"Error creating category: could not execute statement [ORA-00001: violation de contrainte unique (ORACLEDB.UK_T8O6PIVUR7NN124JEHX7CYGW5)\\n] [insert into categories (name,parent_category_id,id) values (?,?,default)]; SQL [insert into categories (name,parent_category_id,id) values (?,?,default)]; constraint [ORACLEDB.UK_T8O6PIVUR7NN124JEHX7CYGW5]\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update category",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Pants\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/service-products/api/categories/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"service-products",
+										"api",
+										"categories",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Pants\"\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/service-products/api/categories/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"categories",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 10:51:46 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Pants\",\n        \"parentCategoryId\": null\n    },\n    \"message\": \"Category updated successfully\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete category",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/service-products/api/categories/31",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"service-products",
+										"api",
+										"categories",
+										"31"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/service-products/api/categories/31",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"categories",
+												"31"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 10:54:10 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": null,\n    \"message\": \"Category deleted successfully\"\n}"
+								},
+								{
+									"name": "400 Bad Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/service-products/api/categories/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"categories",
+												"1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 10:54:48 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": null,\n    \"message\": \"Error deleting category: could not execute statement [ORA-02292: violation de contrainte (ORACLEDB.FKOG2RP4QTHBTT2LFYHFO32LSW9) d'intégrité - enregistrement fils existant\\n] [delete from categories where id=?]; SQL [delete from categories where id=?]; constraint [ORACLEDB.FKOG2RP4QTHBTT2LFYHFO32LSW9]\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Brands",
+					"item": [
+						{
+							"name": "Create new brand",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Gucci\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/service-products/api/brands",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"service-products",
+										"api",
+										"brands"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "201 Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Gucci\"\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/service-products/api/brands",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"brands"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 10:58:23 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": 662,\n        \"name\": \"Gucci\"\n    },\n    \"message\": \"Brand created successfully\"\n}"
+								},
+								{
+									"name": "400 Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Gucci\"\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/service-products/api/brands",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"brands"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 10:58:44 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": null,\n    \"message\": \"Error creating brand: could not execute statement [ORA-00001: violation de contrainte unique (ORACLEDB.UK_OCE3937D2F4MPFQRYCBR0L93M)\\n] [insert into brands (name,id) values (?,default)]; SQL [insert into brands (name,id) values (?,default)]; constraint [ORACLEDB.UK_OCE3937D2F4MPFQRYCBR0L93M]\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Update brand",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"LV\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/service-products/api/brands/1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"service-products",
+										"api",
+										"brands",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"LV\"\r\n\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/service-products/api/brands/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"brands",
+												"1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 10:59:27 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"LV\"\n    },\n    \"message\": \"Brand updated successfully\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete brand",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {
+									"content-type": true
+								}
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/service-products/api/brands/662",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"service-products",
+										"api",
+										"brands",
+										"662"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/service-products/api/brands/662",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"brands",
+												"662"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 11:00:14 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": null,\n    \"message\": \"Brand deleted successfully\"\n}"
+								},
+								{
+									"name": "400 Bad Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/service-products/api/brands/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"brands",
+												"1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 11:00:41 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": null,\n    \"message\": \"Error deleting brand: could not execute statement [ORA-02292: violation de contrainte (ORACLEDB.FKA3A4MPSFDF4D2Y6R8RA3SC8MV) d'intégrité - enregistrement fils existant\\n] [delete from brands where id=?]; SQL [delete from brands where id=?]; constraint [ORACLEDB.FKA3A4MPSFDF4D2Y6R8RA3SC8MV]\"\n}"
+								}
+							]
+						},
+						{
+							"name": "import-csv",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/docteur/Desktop/projetttt/brands.csv"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/service-products/api/brands/import-csv",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"service-products",
+										"api",
+										"brands",
+										"import-csv"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/C:/Users/docteur/Desktop/projetttt/brands.csv"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/service-products/api/brands/import-csv",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"brands",
+												"import-csv"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 11:03:09 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": null,\n    \"message\": \"Brands imported successfully\"\n}"
+								},
+								{
+									"name": "403 Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNzQ4Nzc1ODQ4LCJleHAiOjE3NDg4NjIyNDgsInJvbGVzIjpbIlVTRVIiXSwiZW1haWwiOiJuYXNzaW0ubnNtdHNAZ21haWwuY29tIn0.vcUk9R4SdXGrv05o66MtMnHqR2FgoH2wqT3J5o7wpfPSzQ5eDfHZXBnq30w7bzc4uUp7aFsBatyWieajPct-Yw",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/C:/Users/docteur/Desktop/projetttt/brands.csv"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/service-products/api/brands/import-csv",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"brands",
+												"import-csv"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 11:04:46 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2025-06-01T11:04:46.673+00:00\",\n    \"status\": 403,\n    \"error\": \"Forbidden\",\n    \"trace\": \"org.springframework.security.access.AccessDeniedException: Access Denied\\r\\n\\tat org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.attemptAuthorization(AuthorizationManagerBeforeMethodInterceptor.java:256)\\r\\n\\tat org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:197)\\r\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\\r\\n\\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)\\r\\n\\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)\\r\\n\\tat org.sc.msproducts.controllers.BrandController$$SpringCGLIB$$0.importBrandsFromCsv(<generated>)\\r\\n\\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\\r\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\\r\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)\\r\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)\\r\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)\\r\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)\\r\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)\\r\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\r\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)\\r\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)\\r\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)\\r\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)\\r\\n\\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)\\r\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)\\r\\n\\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)\\r\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)\\r\\n\\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)\\r\\n\\tat org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)\\r\\n\\tat org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)\\r\\n\\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.sc.msproducts.SecurityConfig$1.doFilterInternal(SecurityConfig.java:98)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)\\r\\n\\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)\\r\\n\\tat org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)\\r\\n\\tat org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)\\r\\n\\tat org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)\\r\\n\\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)\\r\\n\\tat org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)\\r\\n\\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)\\r\\n\\tat org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)\\r\\n\\tat org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)\\r\\n\\tat org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)\\r\\n\\tat org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)\\r\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)\\r\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)\\r\\n\\tat org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)\\r\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)\\r\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)\\r\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)\\r\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)\\r\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)\\r\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)\\r\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\\r\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)\\r\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)\\r\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\\r\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)\\r\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)\\r\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\\r\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\r\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\r\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)\\r\\n\\tat java.base/java.lang.Thread.run(Thread.java:1583)\\r\\n\",\n    \"message\": \"Forbidden\",\n    \"path\": \"/api/brands/import-csv\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Products",
+					"item": [
+						{
+							"name": "import-csv",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "multipart/form-data",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/docteur/Desktop/projetttt/products.csv"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/service-products/api/products/import-csv",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"service-products",
+										"api",
+										"products",
+										"import-csv"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwiaWF0IjoxNzQ4Nzc0NDc4LCJleHAiOjE3NDg4NjA4NzgsInJvbGVzIjpbIkFETUlOIl0sImVtYWlsIjoiY3ZtYW42OTBAZ21haWwuY29tIn0.qB6ApDPhfMYiBWlWVFxtYBf2AHzyUpvc_c08GIBB4a68hqMNFzIVQJAjkcJClXiBoJd3Par_8gl5nrS9i9-0wQ",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/C:/Users/docteur/Desktop/projetttt/brands.csv"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/service-products/api/brands/import-csv",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"brands",
+												"import-csv"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 11:03:09 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": null,\n    \"message\": \"Brands imported successfully\"\n}"
+								},
+								{
+									"name": "403 Forbidden",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIzIiwiaWF0IjoxNzQ4Nzc1ODQ4LCJleHAiOjE3NDg4NjIyNDgsInJvbGVzIjpbIlVTRVIiXSwiZW1haWwiOiJuYXNzaW0ubnNtdHNAZ21haWwuY29tIn0.vcUk9R4SdXGrv05o66MtMnHqR2FgoH2wqT3J5o7wpfPSzQ5eDfHZXBnq30w7bzc4uUp7aFsBatyWieajPct-Yw",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "multipart/form-data",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "file",
+													"type": "file",
+													"src": "/C:/Users/docteur/Desktop/projetttt/brands.csv"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{base_url}}/service-products/api/brands/import-csv",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"brands",
+												"import-csv"
+											]
+										}
+									},
+									"status": "Forbidden",
+									"code": 403,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 11:04:46 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"timestamp\": \"2025-06-01T11:04:46.673+00:00\",\n    \"status\": 403,\n    \"error\": \"Forbidden\",\n    \"trace\": \"org.springframework.security.access.AccessDeniedException: Access Denied\\r\\n\\tat org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.attemptAuthorization(AuthorizationManagerBeforeMethodInterceptor.java:256)\\r\\n\\tat org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:197)\\r\\n\\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)\\r\\n\\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)\\r\\n\\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)\\r\\n\\tat org.sc.msproducts.controllers.BrandController$$SpringCGLIB$$0.importBrandsFromCsv(<generated>)\\r\\n\\tat java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)\\r\\n\\tat java.base/java.lang.reflect.Method.invoke(Method.java:580)\\r\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)\\r\\n\\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)\\r\\n\\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)\\r\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)\\r\\n\\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)\\r\\n\\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\\r\\n\\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)\\r\\n\\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)\\r\\n\\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)\\r\\n\\tat org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)\\r\\n\\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)\\r\\n\\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)\\r\\n\\tat jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:206)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)\\r\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)\\r\\n\\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108)\\r\\n\\tat org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$FilterObservation$SimpleFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:479)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$1(ObservationFilterChainDecorator.java:340)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator.lambda$wrapSecured$0(ObservationFilterChainDecorator.java:82)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:128)\\r\\n\\tat org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)\\r\\n\\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.sc.msproducts.SecurityConfig$1.doFilterInternal(SecurityConfig.java:98)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)\\r\\n\\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)\\r\\n\\tat org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)\\r\\n\\tat org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:227)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.wrapFilter(ObservationFilterChainDecorator.java:240)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$AroundFilterObservation$SimpleAroundFilterObservation.lambda$wrap$0(ObservationFilterChainDecorator.java:323)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$ObservationFilter.doFilter(ObservationFilterChainDecorator.java:224)\\r\\n\\tat org.springframework.security.web.ObservationFilterChainDecorator$VirtualFilterChain.doFilter(ObservationFilterChainDecorator.java:137)\\r\\n\\tat org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)\\r\\n\\tat org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)\\r\\n\\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)\\r\\n\\tat org.springframework.web.servlet.handler.HandlerMappingIntrospector.lambda$createCacheFilter$3(HandlerMappingIntrospector.java:195)\\r\\n\\tat org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113)\\r\\n\\tat org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74)\\r\\n\\tat org.springframework.security.config.annotation.web.configuration.WebMvcSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebMvcSecurityConfiguration.java:230)\\r\\n\\tat org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)\\r\\n\\tat org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)\\r\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)\\r\\n\\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)\\r\\n\\tat org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:109)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)\\r\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\\r\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:175)\\r\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:150)\\r\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)\\r\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)\\r\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)\\r\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)\\r\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)\\r\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)\\r\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)\\r\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)\\r\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)\\r\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)\\r\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1736)\\r\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)\\r\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)\\r\\n\\tat org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)\\r\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)\\r\\n\\tat java.base/java.lang.Thread.run(Thread.java:1583)\\r\\n\",\n    \"message\": \"Forbidden\",\n    \"path\": \"/api/brands/import-csv\"\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User routes",
+			"item": [
+				{
+					"name": "ms-search (Advanced ElasticSearch)",
+					"item": [
+						{
+							"name": "suggest (auto complete)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7777/service-search/suggest/?q=w",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7777",
+									"path": [
+										"service-search",
+										"suggest",
+										""
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "w"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7777/service-search/suggest/?q=w",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7777",
+											"path": [
+												"service-search",
+												"suggest",
+												""
+											],
+											"query": [
+												{
+													"key": "q",
+													"value": "w"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 11:41:01 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.11.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "252"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"suggestions\": [\n        \"W Off-White & Lime Green Printed Kurta\",\n        \"W Off-White Printed Palazzo Trousers\",\n        \"Wintage Men Black & Beige Printed Straight Kurta\",\n        \"Wintage Men Black & Beige Printed Straight Kurta\",\n        \"Wintage Men Blue & Off-White Printed Straight Kurt\"\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "search",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7777/service-search/search/?q=Zidane&category=Tshirts&brand=Nike&maxPrice=1000&sort=ascending",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7777",
+									"path": [
+										"service-search",
+										"search",
+										""
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "Zidane"
+										},
+										{
+											"key": "category",
+											"value": "Tshirts"
+										},
+										{
+											"key": "brand",
+											"value": "Nike"
+										},
+										{
+											"key": "maxPrice",
+											"value": "1000"
+										},
+										{
+											"key": "sort",
+											"value": "ascending"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7777/service-search/suggest/?q=Zidane",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7777",
+											"path": [
+												"service-search",
+												"suggest",
+												""
+											],
+											"query": [
+												{
+													"key": "q",
+													"value": "Zidane"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, Cookie"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 11:41:01 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.11.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "252"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"results\": [\n        {\n            \"id\": \"prod_96298\",\n            \"contentType\": \"PRODUCT\",\n            \"name\": \"France Zidane Short\",\n            \"description\": \"Navy blue solid Zidane France Short\",\n            \"sku\": \"30025161\",\n            \"price\": 199.99,\n            \"category\": \"Pants\",\n            \"brand\": \"Tokyo Talkies\"\n        },\n        {\n            \"id\": \"prod_96300\",\n            \"contentType\": \"PRODUCT\",\n            \"title\": \"Zidane Shoes\",\n            \"sku\": \"3357521\",\n            \"description\": \"Signed Zidane shoes, official with proof 2022\",\n            \"price\": 599.99,\n            \"category\": \"T-shirts\",\n            \"brand\": \"Adidas\"\n        }\n    ]\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "ms-products",
+					"item": [
+						{
+							"name": "Categories",
+							"item": [
+								{
+									"name": "Get category",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/service-products/api/categories/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"categories",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "200 OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/service-products/api/categories/1",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"service-products",
+														"api",
+														"categories",
+														"1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "transfer-encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 01 Jun 2025 11:09:35 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Pants\",\n        \"parentCategoryId\": null\n    },\n    \"message\": \"Category retrieved successfully\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Get all categories (paginated)",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/service-products/api/categories?page=0",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"categories"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Get category Copy",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/service-products/api/categories?page=0",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"service-products",
+														"api",
+														"categories"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "0"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "transfer-encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 01 Jun 2025 11:10:26 GMT"
+												}
+											],
+											"cookie": [
+												{
+													"expires": "Invalid Date"
+												}
+											],
+											"body": "{\n    \"data\": [\n        {\n            \"id\": 21,\n            \"name\": \"shoes\",\n            \"parentCategoryId\": null\n        },\n        {\n            \"id\": 26,\n            \"name\": \"Shoe s\",\n            \"parentCategoryId\": null\n        },\n        {\n            \"id\": 28,\n            \"name\": \"T-shirts\",\n            \"parentCategoryId\": null\n        },\n        {\n            \"id\": 32,\n            \"name\": \"Nike\",\n            \"parentCategoryId\": null\n        },\n        {\n            \"id\": 1,\n            \"name\": \"Pants\",\n            \"parentCategoryId\": null\n        },\n        {\n            \"id\": 8,\n            \"name\": \"cx\",\n            \"parentCategoryId\": null\n        },\n        {\n            \"id\": 9,\n            \"name\": \"cxx\",\n            \"parentCategoryId\": 8\n        }\n    ],\n    \"message\": \"Categories retrieved successfully\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Products",
+							"item": [
+								{
+									"name": "Get product",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/service-products/api/products/95000",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"products",
+												"95000"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "200 OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/service-products/api/products/95000",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"service-products",
+														"api",
+														"products",
+														"95000"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "transfer-encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 01 Jun 2025 11:22:04 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": {\n        \"id\": 95000,\n        \"name\": \"Blackberrys Black Single-Breasted Slim Fit Formal Blazer\",\n        \"description\": \"Black woven formal blazer, has a notched lapel, single-breasted with double button closure, long sleeves with buttoned detail on the hems, structured shoulders, two welt pockets on the front, a mock chest pocket, a double vented back hem, and has an attached lining with three built-in pockets\",\n        \"sku\": \"1001061\",\n        \"price\": 35.97,\n        \"currency\": \"USD\",\n        \"categoryId\": 1,\n        \"categoryName\": \"Pants\",\n        \"brandId\": 72,\n        \"brandName\": \"Blackberrys\",\n        \"userId\": 1,\n        \"stockQty\": 100,\n        \"status\": \"ACTIVE\"\n    },\n    \"message\": \"Product retrieved successfully\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Get product by other currency",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/service-products/api/products/95000?currency=EUR",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"products",
+												"95000"
+											],
+											"query": [
+												{
+													"key": "currency",
+													"value": "EUR"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "200 OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/service-products/api/products/95000",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"service-products",
+														"api",
+														"products",
+														"95000"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "transfer-encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 01 Jun 2025 11:22:04 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": {\n        \"id\": 95000,\n        \"name\": \"Blackberrys Black Single-Breasted Slim Fit Formal Blazer\",\n        \"description\": \"Black woven formal blazer, has a notched lapel, single-breasted with double button closure, long sleeves with buttoned detail on the hems, structured shoulders, two welt pockets on the front, a mock chest pocket, a double vented back hem, and has an attached lining with three built-in pockets\",\n        \"sku\": \"1001061\",\n        \"price\": 31.71,\n        \"currency\": \"EUR\",\n        \"categoryId\": 1,\n        \"categoryName\": \"Pants\",\n        \"brandId\": 72,\n        \"brandName\": \"Blackberrys\",\n        \"userId\": 1,\n        \"stockQty\": 100,\n        \"status\": \"ACTIVE\"\n    },\n    \"message\": \"Product retrieved successfully\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Get all products(paginated)",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/service-products/api/products?page=5",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"products"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "200 OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/service-products/api/products?page=5",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"service-products",
+														"api",
+														"products"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "5"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "transfer-encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 01 Jun 2025 11:16:08 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": [\n        {\n            \"id\": 96087,\n            \"name\": \"Geox Men Black Textured Leather Comfort Sandals\",\n            \"description\": \"A pair of black textured comfort sandalsLeather upper with buckle closureCushioned footbedPatterned rubber outsoleWarranty: 6 monthsWarranty provided by brand/manufacturer\",\n            \"sku\": \"10029171\",\n            \"price\": 29.99,\n            \"currency\": \"USD\",\n            \"categoryId\": 1,\n            \"categoryName\": \"Pants\",\n            \"brandId\": 113,\n            \"brandName\": \"Geox\",\n            \"userId\": 1,\n            \"stockQty\": 100,\n            \"status\": \"ACTIVE\"\n        },\n        {\n            \"id\": 96088,\n            \"name\": \"SEJ by Nisha Gupta Multicoloured Printed Table Runner\",\n            \"description\": \"Set content: One runnerType: Table runnerColour: MulticolouredFabric: PolycottonShape: RectangularPattern: FloralDisclaimer : Product colour may slightly vary due to photographic lighting sources or your monitor settings.\",\n            \"sku\": \"10018887\",\n            \"price\": 69.9,\n            \"currency\": \"USD\",\n            \"categoryId\": 1,\n            \"categoryName\": \"Pants\",\n            \"brandId\": 11,\n            \"brandName\": \"SEJ by Nisha Gupta\",\n            \"userId\": 1,\n            \"stockQty\": 100,\n            \"status\": \"ACTIVE\"\n        },\n        {\n            \"id\": 96089,\n            \"name\": \"Next Look Men Blue Slim Fit Self Design Formal Shirt\",\n            \"description\": \"Blue self-design formal shirt, has a spread collar, long sleeves, button placket, straight hem, and 1 patch pocket\",\n            \"sku\": \"10030285\",\n            \"price\": 59.9,\n            \"currency\": \"USD\",\n            \"categoryId\": 1,\n            \"categoryName\": \"Pants\",\n            \"brandId\": 110,\n            \"brandName\": \"Next Look\",\n            \"userId\": 1,\n            \"stockQty\": 100,\n            \"status\": \"ACTIVE\"\n        },\n        {\n            \"id\": 96090,\n            \"name\": \"HERE&NOW Women Pink Solid Bomber Jacket\",\n            \"description\": \"Pink solid jacket, has a stand collar, 2 pockets, zip closure, long sleeves, straight hem\",\n            \"sku\": \"10032753\",\n            \"price\": 99.9,\n            \"currency\": \"USD\",\n            \"categoryId\": 1,\n            \"categoryName\": \"Pants\",\n            \"brandId\": 108,\n            \"brandName\": \"HERE&NOW\",\n            \"userId\": 1,\n            \"stockQty\": 100,\n            \"status\": \"ACTIVE\"\n        },\n        {\n            \"id\": 96091,\n            \"name\": \"Tokyo Talkies Women Navy Blue Maxi Dress\",\n            \"description\": \"Navy blue solid woven maxi dress, has a shirt collar, sleeveless, button closure, and flared hem\",\n            \"sku\": \"10025161\",\n            \"price\": 12.99,\n            \"currency\": \"USD\",\n            \"categoryId\": 1,\n            \"categoryName\": \"Pants\",\n            \"brandId\": 24,\n            \"brandName\": \"Tokyo Talkies\",\n            \"userId\": 1,\n            \"stockQty\": 100,\n            \"status\": \"ACTIVE\"\n        },\n        {\n            \"id\": 96092,\n            \"name\": \"Next Look Men Blue Slim Fit Self Design Formal Shirt\",\n            \"description\": \"Blue self-design formal shirt, has a spread collar, long sleeves, button placket, straight hem, and 1 patch pocket\",\n            \"sku\": \"10030269\",\n            \"price\": 59.9,\n            \"currency\": \"USD\",\n            \"categoryId\": 1,\n            \"categoryName\": \"Pants\",\n            \"brandId\": 110,\n            \"brandName\": \"Next Look\",\n            \"userId\": 1,\n            \"stockQty\": 100,\n            \"status\": \"ACTIVE\"\n        },\n        {\n            \"id\": 96093,\n            \"name\": \"OddCroft Black & White Textured Ceramic Flower Vase\",\n            \"description\": \"Set Content: 1 flower vase  Colour: Black and white Pattern: Textured Shape: Cylindrical Material: Ceramic\",\n            \"sku\": \"10027143\",\n            \"price\": 12.74,\n            \"currency\": \"USD\",\n            \"categoryId\": 1,\n            \"categoryName\": \"Pants\",\n            \"brandId\": 149,\n            \"brandName\": \"OddCroft\",\n            \"userId\": 1,\n            \"stockQty\": 100,\n            \"status\": \"ACTIVE\"\n        },\n        {\n            \"id\": 96067,\n            \"name\": \"MSC Women Gold-Toned Solid Open Toe Flats\",\n            \"description\": \"A pair of gold-toned open-toed flats, has regular styling, velcro detailSynthetic upperCushioned footbedTextured and patterned outsole\",\n            \"sku\": \"10028937\",\n            \"price\": 67.9,\n            \"currency\": \"USD\",\n            \"categoryId\": 1,\n            \"categoryName\": \"Pants\",\n            \"brandId\": 116,\n            \"brandName\": \"MSC\",\n            \"userId\": 1,\n            \"stockQty\": 100,\n            \"status\": \"ACTIVE\"\n        },\n        {\n            \"id\": 96068,\n            \"name\": \"Anekaant Turquoise Blue Self Design Sling Bag\",\n            \"description\": \"Turquoise Blue self design sling bag, has a zip closure1 main compartment, 3 inner pocketsTablet sleeve: No\",\n            \"sku\": \"10035419\",\n            \"price\": 71.9,\n            \"currency\": \"USD\",\n            \"categoryId\": 1,\n            \"categoryName\": \"Pants\",\n            \"brandId\": 117,\n            \"brandName\": \"Anekaant\",\n            \"userId\": 1,\n            \"stockQty\": 100,\n            \"status\": \"ACTIVE\"\n        },\n        {\n            \"id\": 94771,\n            \"name\": \"DKNY Unisex Black Medium Trolley Bag\",\n            \"description\": \"Black solid medium trolley bag, secured with a TSA lockOne handle on the top and one on the side, has a trolley with a retractable handle on the top and four corner mounted inline skate wheelsOne main zip compartment, zip lining, two compression straps with click clasps and one zip pocketOne exterior zip pocketWarranty: 5 yearsWarranty provided by Brand Owner / Manufacturer\",\n            \"sku\": \"10017427\",\n            \"price\": 133.2,\n            \"currency\": \"USD\",\n            \"categoryId\": 1,\n            \"categoryName\": \"Pants\",\n            \"brandId\": 1,\n            \"brandName\": \"LV\",\n            \"userId\": 1,\n            \"stockQty\": 100,\n            \"status\": \"ACTIVE\"\n        }\n    ],\n    \"message\": \"Products retrieved successfully\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Create Product",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNzQ4Nzc3MTI2LCJleHAiOjE3NDg4NjM1MjYsInJvbGVzIjpbIlVTRVIiXSwiZW1haWwiOiJtZWRuYXNzaW0uZmVsbGFoQGdtYWlsLmNvbSJ9.CmBE2SPcDWoGH4zPI72Ycoxvm2SWOWUkIpmeAWS8Vkh381F5tpG8oSL9YjfMQRvNdmizKuXOhA-TtTwxy1v6ug",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"France t-shirt\",\r\n    \"description\": \"Navy blue solid Zidane France t-shirt\",\r\n    \"sku\": \"30025161\",\r\n    \"price\": 199.99,\r\n    \"currency\": \"USD\",\r\n    \"categoryId\": 1,\r\n    \"categoryName\": \"Pants\",\r\n    \"brandId\": 24,\r\n    \"brandName\": \"Nike\",\r\n    \"userId\": 1,\r\n    \"stockQty\": 100,\r\n    \"status\": \"ACTIVE\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/service-products/api/products",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"products"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "201 Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\": \"France t-shirt\",\r\n    \"description\": \"Navy blue solid Zidane France t-shirt\",\r\n    \"sku\": \"30025161\",\r\n    \"price\": 199.99,\r\n    \"currency\": \"USD\",\r\n    \"categoryId\": 1,\r\n    \"categoryName\": \"Pants\",\r\n    \"brandId\": 24,\r\n    \"brandName\": \"Nike\",\r\n    \"userId\": 1,\r\n    \"stockQty\": 100,\r\n    \"status\": \"ACTIVE\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{base_url}}/service-products/api/products",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"service-products",
+														"api",
+														"products"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "transfer-encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 01 Jun 2025 11:29:24 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": {\n        \"id\": 96322,\n        \"name\": \"France t-shirt\",\n        \"description\": \"Navy blue solid Zidane France t-shirt\",\n        \"sku\": \"30025161\",\n        \"price\": 199.99,\n        \"currency\": \"USD\",\n        \"categoryId\": 1,\n        \"categoryName\": \"Pants\",\n        \"brandId\": 24,\n        \"brandName\": \"Tokyo Talkies\",\n        \"userId\": 4,\n        \"stockQty\": 100,\n        \"status\": \"ACTIVE\"\n    },\n    \"message\": \"Product created successfully\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Update Product",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNzQ4Nzc3MTI2LCJleHAiOjE3NDg4NjM1MjYsInJvbGVzIjpbIlVTRVIiXSwiZW1haWwiOiJtZWRuYXNzaW0uZmVsbGFoQGdtYWlsLmNvbSJ9.CmBE2SPcDWoGH4zPI72Ycoxvm2SWOWUkIpmeAWS8Vkh381F5tpG8oSL9YjfMQRvNdmizKuXOhA-TtTwxy1v6ug",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"France Zidane Short\",\r\n    \"description\": \"Navy blue solid Zidane France Short\",\r\n    \"sku\": \"30025161\",\r\n    \"price\": 199.99,\r\n    \"currency\": \"USD\",\r\n    \"categoryId\": 1,\r\n    \"categoryName\": \"Pants\",\r\n    \"brandId\": 24,\r\n    \"brandName\": \"Nike\",\r\n    \"userId\": 1,\r\n    \"stockQty\": 100,\r\n    \"status\": \"ACTIVE\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/service-products/api/products/96322",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"products",
+												"96322"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "200 OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\": \"France Zidane Short\",\r\n    \"description\": \"Navy blue solid Zidane France Short\",\r\n    \"sku\": \"30025161\",\r\n    \"price\": 199.99,\r\n    \"currency\": \"USD\",\r\n    \"categoryId\": 1,\r\n    \"categoryName\": \"Pants\",\r\n    \"brandId\": 24,\r\n    \"brandName\": \"Nike\",\r\n    \"userId\": 1,\r\n    \"stockQty\": 100,\r\n    \"status\": \"ACTIVE\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{base_url}}/service-products/api/products/96322",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"service-products",
+														"api",
+														"products",
+														"96322"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "transfer-encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 01 Jun 2025 11:35:37 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": {\n        \"id\": 96322,\n        \"name\": \"France Zidane Short\",\n        \"description\": \"Navy blue solid Zidane France Short\",\n        \"sku\": \"30025161\",\n        \"price\": 199.99,\n        \"currency\": \"USD\",\n        \"categoryId\": 1,\n        \"categoryName\": \"Pants\",\n        \"brandId\": 24,\n        \"brandName\": \"Tokyo Talkies\",\n        \"userId\": 4,\n        \"stockQty\": 100,\n        \"status\": \"ACTIVE\"\n    },\n    \"message\": \"Product updated successfully\"\n}"
+										}
+									]
+								},
+								{
+									"name": "New Request",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNzQ4Nzc3MTI2LCJleHAiOjE3NDg4NjM1MjYsInJvbGVzIjpbIlVTRVIiXSwiZW1haWwiOiJtZWRuYXNzaW0uZmVsbGFoQGdtYWlsLmNvbSJ9.CmBE2SPcDWoGH4zPI72Ycoxvm2SWOWUkIpmeAWS8Vkh381F5tpG8oSL9YjfMQRvNdmizKuXOhA-TtTwxy1v6ug",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/service-products/api/products/96322",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"products",
+												"96322"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "200 OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/service-products/api/products/96322",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"service-products",
+														"api",
+														"products",
+														"96322"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "transfer-encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 01 Jun 2025 11:36:24 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": null,\n    \"message\": \"Product deleted successfully\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Brands",
+							"item": [
+								{
+									"name": "Get brand",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNzQ4Nzc3MTI2LCJleHAiOjE3NDg4NjM1MjYsInJvbGVzIjpbIlVTRVIiXSwiZW1haWwiOiJtZWRuYXNzaW0uZmVsbGFoQGdtYWlsLmNvbSJ9.CmBE2SPcDWoGH4zPI72Ycoxvm2SWOWUkIpmeAWS8Vkh381F5tpG8oSL9YjfMQRvNdmizKuXOhA-TtTwxy1v6ug",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/service-products/api/brands/1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"brands",
+												"1"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "200 OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/service-products/api/categories/1",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"service-products",
+														"api",
+														"categories",
+														"1"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "transfer-encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 01 Jun 2025 11:09:35 GMT"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Nike\"\n  \n    },\n    \"message\": \"Brand retrieved successfully\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Get all brands(paginated)",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNzQ4Nzc3MTI2LCJleHAiOjE3NDg4NjM1MjYsInJvbGVzIjpbIlVTRVIiXSwiZW1haWwiOiJtZWRuYXNzaW0uZmVsbGFoQGdtYWlsLmNvbSJ9.CmBE2SPcDWoGH4zPI72Ycoxvm2SWOWUkIpmeAWS8Vkh381F5tpG8oSL9YjfMQRvNdmizKuXOhA-TtTwxy1v6ug",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/service-products/api/brands?page=0",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-products",
+												"api",
+												"brands"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "0"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Get category Copy",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{base_url}}/service-products/api/categories?page=0",
+													"host": [
+														"{{base_url}}"
+													],
+													"path": [
+														"service-products",
+														"api",
+														"categories"
+													],
+													"query": [
+														{
+															"key": "page",
+															"value": "0"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "transfer-encoding",
+													"value": "chunked"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "Vary",
+													"value": "Origin"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Method"
+												},
+												{
+													"key": "Vary",
+													"value": "Access-Control-Request-Headers"
+												},
+												{
+													"key": "X-Content-Type-Options",
+													"value": "nosniff"
+												},
+												{
+													"key": "X-XSS-Protection",
+													"value": "0"
+												},
+												{
+													"key": "Cache-Control",
+													"value": "no-cache, no-store, max-age=0, must-revalidate"
+												},
+												{
+													"key": "Pragma",
+													"value": "no-cache"
+												},
+												{
+													"key": "Expires",
+													"value": "0"
+												},
+												{
+													"key": "X-Frame-Options",
+													"value": "DENY"
+												},
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												},
+												{
+													"key": "Date",
+													"value": "Sun, 01 Jun 2025 11:10:26 GMT"
+												}
+											],
+											"cookie": [
+												{
+													"expires": "Invalid Date"
+												}
+											],
+											"body": "{\n    \"data\": [\n        {\n            \"id\": 21,\n            \"name\": \"shoes\",\n            \"parentCategoryId\": null\n        },\n        {\n            \"id\": 26,\n            \"name\": \"Shoe s\",\n            \"parentCategoryId\": null\n        },\n        {\n            \"id\": 28,\n            \"name\": \"T-shirts\",\n            \"parentCategoryId\": null\n        },\n        {\n            \"id\": 32,\n            \"name\": \"Nike\",\n            \"parentCategoryId\": null\n        },\n        {\n            \"id\": 1,\n            \"name\": \"Pants\",\n            \"parentCategoryId\": null\n        },\n        {\n            \"id\": 8,\n            \"name\": \"cx\",\n            \"parentCategoryId\": null\n        },\n        {\n            \"id\": 9,\n            \"name\": \"cxx\",\n            \"parentCategoryId\": 8\n        }\n    ],\n    \"message\": \"Categories retrieved successfully\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "ms-auth",
+					"item": [
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Nassim\",\r\n    \"lastName\": \"Fellah\",\r\n    \"email\": \"mednassim.fellah@gmail.com\",\r\n    \"password\": \"StrongPass123\",\r\n    \"confirmPassword\": \"StrongPass123\",\r\n    \"username\":\"verycoolusername\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/service-auth/api/users/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"service-auth",
+										"api",
+										"users",
+										"register"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "201 Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\": \"Nassim\",\r\n    \"lastName\": \"Fellah\",\r\n    \"email\": \"mednassim.fellah@gmail.com\",\r\n    \"password\": \"StrongPass123\",\r\n    \"confirmPassword\": \"StrongPass123\",\r\n    \"username\":\"verycoolusername\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{base_url}}/service-auth/api/users/register",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"service-auth",
+												"api",
+												"users",
+												"register"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 11:58:25 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "// an email with verification link has been sent to the mail\n{\n    \"data\": {\n        \"id\": 5,\n        \"username\": \"verycoolusername\",\n        \"email\": \"mednassim.fellah@gmail.com\",\n        \"firstName\": \"Nassim\",\n        \"lastName\": \"Fellah\",\n        \"phone\": null,\n        \"address\": null,\n        \"roleNames\": [\n            \"USER\"\n        ],\n        \"emailVerified\": false,\n        \"token\": null\n    },\n    \"message\": \"User created successfully\"\n}"
+								}
+							]
+						},
+						{
+							"name": "verify-email",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7777/service-auth/api/users/verify-email?token=...... find it in mail ....",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7777",
+									"path": [
+										"service-auth",
+										"api",
+										"users",
+										"verify-email"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "...... find it in mail ...."
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7777/service-auth/api/users/verify-email?token=73ca0049-73d3-456d-b468-c5974d6a6cad",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7777",
+											"path": [
+												"service-auth",
+												"api",
+												"users",
+												"verify-email"
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "73ca0049-73d3-456d-b468-c5974d6a6cad"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 12:05:27 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": \"Email verified successfully\",\n    \"message\": \"Success\"\n}"
+								}
+							]
+						},
+						{
+							"name": "get all users",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNzQ4Nzc3MTI2LCJleHAiOjE3NDg4NjM1MjYsInJvbGVzIjpbIlVTRVIiXSwiZW1haWwiOiJtZWRuYXNzaW0uZmVsbGFoQGdtYWlsLmNvbSJ9.CmBE2SPcDWoGH4zPI72Ycoxvm2SWOWUkIpmeAWS8Vkh381F5tpG8oSL9YjfMQRvNdmizKuXOhA-TtTwxy1v6ug",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7777/service-auth/api/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7777",
+									"path": [
+										"service-auth",
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7777/service-auth/api/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7777",
+											"path": [
+												"service-auth",
+												"api",
+												"users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 12:07:10 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"username\": \"cvman690@gmail.com\",\n            \"email\": \"cvman690@gmail.com\",\n            \"firstName\": null,\n            \"lastName\": null,\n            \"phone\": null,\n            \"address\": null,\n            \"roleNames\": [\n                \"ADMIN\"\n            ],\n            \"emailVerified\": true,\n            \"token\": null\n        },\n        {\n            \"id\": 2,\n            \"username\": \"happylittleanimal20\",\n            \"email\": \"happylittleanimal20@gmail.com\",\n            \"firstName\": \"مغامرات\",\n            \"lastName\": \"الحيوان الصغير\",\n            \"phone\": null,\n            \"address\": null,\n            \"roleNames\": [\n                \"USER\"\n            ],\n            \"emailVerified\": true,\n            \"token\": null\n        },\n        {\n            \"id\": 3,\n            \"username\": \"nassim.nsmts\",\n            \"email\": \"nassim.nsmts@gmail.com\",\n            \"firstName\": \"Zuxxlo\",\n            \"lastName\": \"\",\n            \"phone\": null,\n            \"address\": null,\n            \"roleNames\": [\n                \"USER\"\n            ],\n            \"emailVerified\": true,\n            \"token\": null\n        },\n        {\n            \"id\": 4,\n            \"username\": \"mednassim.fellah\",\n            \"email\": \"mednassidddm.fellah@gmail.com\",\n            \"firstName\": \"Mohammed\",\n            \"lastName\": \"Nassim Fellah\",\n            \"phone\": null,\n            \"address\": null,\n            \"roleNames\": [\n                \"USER\"\n            ],\n            \"emailVerified\": true,\n            \"token\": null\n        },\n        {\n            \"id\": 6,\n            \"username\": \"verycoolusername\",\n            \"email\": \"mednassim.fellah@gmail.com\",\n            \"firstName\": \"Nassim\",\n            \"lastName\": \"Fellah\",\n            \"phone\": null,\n            \"address\": null,\n            \"roleNames\": [\n                \"USER\"\n            ],\n            \"emailVerified\": true,\n            \"token\": null\n        }\n    ],\n    \"message\": \"Users fetched successfully\"\n}"
+								}
+							]
+						},
+						{
+							"name": "get all users Copy",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI0IiwiaWF0IjoxNzQ4Nzc3MTI2LCJleHAiOjE3NDg4NjM1MjYsInJvbGVzIjpbIlVTRVIiXSwiZW1haWwiOiJtZWRuYXNzaW0uZmVsbGFoQGdtYWlsLmNvbSJ9.CmBE2SPcDWoGH4zPI72Ycoxvm2SWOWUkIpmeAWS8Vkh381F5tpG8oSL9YjfMQRvNdmizKuXOhA-TtTwxy1v6ug",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7777/service-auth/api/users/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7777",
+									"path": [
+										"service-auth",
+										"api",
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:7777/service-auth/api/users",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7777",
+											"path": [
+												"service-auth",
+												"api",
+												"users"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 12:07:10 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"username\": \"cvman690@gmail.com\",\n        \"email\": \"cvman690@gmail.com\",\n        \"firstName\": null,\n        \"lastName\": null,\n        \"phone\": null,\n        \"address\": null,\n        \"roleNames\": [\n            \"ADMIN\"\n        ],\n        \"emailVerified\": true,\n        \"token\": null\n    },\n    \"message\": \"User details fetched successfully\"\n}"
+								}
+							]
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{    \"email\": \"mednassim.fellah@gmail.com\",\r\n    \"password\": \"StrongPass123\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:7777/service-auth/api/users/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7777",
+									"path": [
+										"service-auth",
+										"api",
+										"users",
+										"login"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "200 OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{    \"email\": \"mednassim.fellah@gmail.com\",\r\n    \"password\": \"StrongPass123\"}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:7777/service-auth/api/users/login",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "7777",
+											"path": [
+												"service-auth",
+												"api",
+												"users",
+												"login"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "transfer-encoding",
+											"value": "chunked"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "Vary",
+											"value": "Origin"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Method"
+										},
+										{
+											"key": "Vary",
+											"value": "Access-Control-Request-Headers"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "X-XSS-Protection",
+											"value": "0"
+										},
+										{
+											"key": "Cache-Control",
+											"value": "no-cache, no-store, max-age=0, must-revalidate"
+										},
+										{
+											"key": "Pragma",
+											"value": "no-cache"
+										},
+										{
+											"key": "Expires",
+											"value": "0"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 01 Jun 2025 12:11:34 GMT"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"data\": {\n        \"id\": 6,\n        \"username\": \"verycoolusername\",\n        \"email\": \"mednassim.fellah@gmail.com\",\n        \"firstName\": \"Nassim\",\n        \"lastName\": \"Fellah\",\n        \"phone\": null,\n        \"address\": null,\n        \"roleNames\": [\n            \"USER\"\n        ],\n        \"emailVerified\": true,\n        \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI2IiwiaWF0IjoxNzQ4Nzc5ODk0LCJleHAiOjE3NDg4NjYyOTQsInJvbGVzIjpbIlVTRVIiXSwiZW1haWwiOiJtZWRuYXNzaW0uZmVsbGFoQGdtYWlsLmNvbSJ9.tSCIi1pwTS_ZJaI0VoTT-YSsBtQhlXVDuPgMWPwX5CTHPkoBTj2mB45z4ZkuT35bMMpqnEOQishuvgxr3XUoUg\"\n    },\n    \"message\": \"Login successful\"\n}"
+								}
+							]
+						},
+						{
+							"name": "login with google",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:7777/service-auth/oauth2/authorization/google",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "7777",
+									"path": [
+										"service-auth",
+										"oauth2",
+										"authorization",
+										"google"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}
