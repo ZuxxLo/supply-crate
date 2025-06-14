@@ -1,0 +1,18 @@
+# Ignore IntelliJ IDEA project files
+.idea/
+
+# Ignore build files and logs for Java/Spring Boot
+target/
+*.log
+
+# Ignore Python/Django files (for ms-search)
+ms-search/__pycache__/
+ms-search/*.pyc
+ms-search/db.sqlite3
+ms-search/env/
+ms-search/.env
+ms-search/django-supply-crate/.venv/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
